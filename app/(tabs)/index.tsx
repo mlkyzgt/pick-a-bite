@@ -1,19 +1,23 @@
-import React, { useState } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  Alert,
-} from "react-native";
-import MapView, { Marker } from "react-native-maps";
 import { Ionicons } from "@expo/vector-icons";
 import { Camera } from "expo-camera";
+import { useRouter } from "expo-router";
+import React, { useState } from "react";
+import {
+  Alert,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import MapView, { Marker } from "react-native-maps";
 
-const HomeScreen = ({ navigation }) => {
-  const [hasPermission, setHasPermission] = useState(null);
+export default function HomeScreen() {
+  const router = useRouter();
+  // Kamera izni durumunu tutan state
+  const [hasPermission, setHasPermission] = useState<boolean | null>(null);
 
+  // Kamera izinlerini kontrol eden veya talep eden fonksiyon
   const requestCameraPermission = async () => {
     const { status } = await Camera.requestCameraPermissionsAsync();
     const granted = status === "granted";
@@ -23,25 +27,47 @@ const HomeScreen = ({ navigation }) => {
     if (!granted) {
       Alert.alert(
         "İzin Gerekli",
-        "QR kod okutmak için kameraya izin vermelisin.",
+        "QR kod okutmak için kamera izni vermelisin.",
       );
     }
 
     return granted;
   };
 
+  // İzin alındıktan sonra kamera ekranına yönlendiren fonksiyon
   const handleOpenCamera = async () => {
     const granted = await requestCameraPermission();
 
     if (granted) {
-      console.log("Kamera açılabilir");
+      router.push("/camera");
     }
   };
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <View style={styles.searchContainer}>
+      {/* Harita */}
+      <MapView
+        style={StyleSheet.absoluteFillObject}
+        initialRegion={{
+          latitude: 40.195,
+          longitude: 29.06,
+          latitudeDelta: 0.02,
+          longitudeDelta: 0.02,
+        }}
+      >
+        {/* Örnek restoranın harita üzerindeki konumu */}
+        <Marker
+          coordinate={{
+            latitude: 40.195,
+            longitude: 29.06,
+          }}
+          title="Örnek Restoran"
+        />
+      </MapView>
+
+      {/* Arama Çubuğu ve Profil Butonu */}
+      <View style={styles.searchOverlay}>
+        <View style={styles.searchBox}>
           <Ionicons name="search-outline" size={20} color="#666" />
 
           <TextInput
@@ -51,73 +77,56 @@ const HomeScreen = ({ navigation }) => {
           />
         </View>
 
-        <TouchableOpacity style={styles.profileButton}>
+        <TouchableOpacity style={styles.profileBtn}>
           <Ionicons name="person-outline" size={22} color="#319795" />
         </TouchableOpacity>
       </View>
 
-      <View style={styles.mapContainer}>
-        <MapView
-          style={styles.map}
-          initialRegion={{
-            latitude: 40.195,
-            longitude: 29.06,
-            latitudeDelta: 0.02,
-            longitudeDelta: 0.02,
-          }}
-        >
-          <Marker
-            coordinate={{
-              latitude: 40.195,
-              longitude: 29.06,
-            }}
-            title="Örnek Restoran"
-            description="Lezzetli yemekler burada"
-          />
-        </MapView>
-      </View>
-
-      <View style={styles.bottomContainer}>
+      {/* QR Okutma Butonu ve Etiketi */}
+      <View style={styles.bottomCenter}>
         <TouchableOpacity style={styles.qrButton} onPress={handleOpenCamera}>
-          <Ionicons name="camera-outline" size={30} color="white" />
+          <Ionicons name="qr-code-outline" size={32} color="white" />
         </TouchableOpacity>
 
-        <Text style={styles.qrText}>QR Kod Okut</Text>
+        <Text style={styles.qrText}>SCAN</Text>
       </View>
     </View>
   );
-};
-
-export default HomeScreen;
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#FDF9F0",
   },
 
-  header: {
+  /* Harita Stili */
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
+
+  /* Arama Çubuğu Stili */
+  searchOverlay: {
+    position: "absolute",
+    top: 50,
+    left: 16,
+    right: 16,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
-    paddingHorizontal: 16,
-    marginTop: 50,
   },
 
-  searchContainer: {
+  searchBox: {
+    flex: 1,
     flexDirection: "row",
     alignItems: "center",
     backgroundColor: "white",
-    borderRadius: 25,
     paddingHorizontal: 12,
     paddingVertical: 10,
-    flex: 1,
-    marginRight: 10,
+    borderRadius: 25,
 
     shadowColor: "#000",
-    shadowOpacity: 0.05,
-    shadowRadius: 5,
-    elevation: 3,
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
+    elevation: 5,
   },
 
   input: {
@@ -126,7 +135,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  profileButton: {
+  profileBtn: {
+    marginLeft: 10,
     width: 45,
     height: 45,
     borderRadius: 22,
@@ -135,53 +145,38 @@ const styles = StyleSheet.create({
     alignItems: "center",
 
     shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 5,
-    elevation: 4,
-  },
-
-  /* HARİTA */
-  mapContainer: {
-    flex: 1,
-    margin: 16,
-    borderRadius: 20,
-    overflow: "hidden",
-
-    shadowColor: "#000",
-    shadowOpacity: 0.1,
-    shadowRadius: 10,
+    shadowOpacity: 0.15,
+    shadowRadius: 6,
     elevation: 5,
   },
 
-  map: {
-    width: "100%",
-    height: "100%",
-  },
-
-  /* ALT QR */
-  bottomContainer: {
+  /* QR Buton Stili */
+  bottomCenter: {
+    position: "absolute",
+    bottom: 35,
+    left: 0,
+    right: 0,
     alignItems: "center",
-    marginBottom: 25,
   },
 
   qrButton: {
     backgroundColor: "#ED8936",
-    width: 70,
-    height: 70,
-    borderRadius: 35,
+    width: 75,
+    height: 75,
+    borderRadius: 37.5,
     justifyContent: "center",
     alignItems: "center",
 
     shadowColor: "#000",
-    shadowOpacity: 0.2,
-    shadowRadius: 8,
-    elevation: 6,
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+    elevation: 10,
   },
 
   qrText: {
     marginTop: 8,
     fontSize: 14,
     color: "#333",
-    fontWeight: "500",
+    fontWeight: "800",
   },
 });
