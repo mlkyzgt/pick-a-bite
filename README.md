@@ -57,7 +57,7 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 - **Tuğba Nur Ayık** → Kullanıcı deneyimi tasarımı, sayfa akışları, mobil ekran düzenleri  
 
 ### Back-End Takımı
-- **Raul Namazzada** → Spring Boost API geliştirme  
+- **Raul Namazzada** → Spring Boot API geliştirme  
 - **Ali Yılmaz** → PostgreSQL veritabanı yönetimi  
 - **Kübra Kaya** → Veri akışı ve sistem entegrasyonu  
 
@@ -70,7 +70,7 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 ## Takım Yetkinlikleri
 
 - React Native mobil uygulama geliştirme  
-- Spring Boost backend geliştirme  
+- Spring Boot backend geliştirme  
 - PostgreSQL veritabanı yönetimi  
 - REST API geliştirme  
 - UI/UX tasarımı  
@@ -88,7 +88,7 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 - Expo
 
 ### Backend
-- Spring Boost
+- Spring Boot
 
 ### Veritabanı
 - PostgreSQL
@@ -135,7 +135,7 @@ Sistem vegan, vejetaryen, helal, glütensiz gibi tercihler ile alerjen bilgileri
 ```text
 Mobil Uygulama (React Native)
         ↓
-Backend API (Spring Boost)
+Backend API (Spring Boot)
         ↓
 PostgreSQL Database
         ↓
