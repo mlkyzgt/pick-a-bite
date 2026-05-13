@@ -1,50 +1,189 @@
-# Welcome to your Expo app 👋
+# Pick A Bite
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Pick A Bite, kullanıcıların restoran menülerini daha hızlı, bilinçli ve kişisel ihtiyaçlarına uygun şekilde değerlendirebilmelerini amaçlayan yapay zekâ destekli, konum tabanlı bir yemek öneri ve menü karşılaştırma uygulamasıdır.
 
-## Get started
+Uygulama; QR kod ile restoran menüsüne erişim, yapay zekâ destekli yemek önerileri, alerjen filtreleme ve çevredeki restoranları karşılaştırma gibi özellikleri bir araya getirir.
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## Proje Özellikleri
 
-2. Start the app
+- Konum tabanlı restoran keşfi
+- QR kod ile dijital menü erişimi
+- AI destekli chatbot sistemi
+- Beslenme tercihi ve alerjen filtreleme
+- Bütçe odaklı yemek önerileri
+- Yakındaki restoranları karşılaştırma
+- Modern mobil arayüz
+- Harita tabanlı restoran görüntüleme
 
-   ```bash
-   npx expo start
-   ```
+---
 
-In the output, you'll find options to open the app in a
+## Projenin Amacı
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Günümüzde restoran menüleri kullanıcılar için karmaşık ve zaman kaybettirici olabilmektedir. Ayrıca kullanıcılar:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- bütçelerine uygun yemek bulmakta,
+- alerjen bilgilerine ulaşmakta,
+- sağlıklı seçenekleri filtrelemekte,
+- alternatif restoranları karşılaştırmakta
 
-## Get a fresh project
+zorluk yaşayabilmektedir.
 
-When you're ready, run:
+Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırmayı hedeflemektedir.
 
-```bash
-npm run reset-project
+---
+
+## Proje Hedefleri
+
+- QR tabanlı hızlı menü erişimi sağlamak
+- Yapay zekâ destekli yemek öneri sistemi geliştirmek
+- Konum tabanlı restoran keşfi sunmak
+- Restoranlar arası fiyat ve menü karşılaştırması yapmak
+- Kullanıcı tercihlerini analiz ederek kişiselleştirilmiş deneyim oluşturmak
+- Mobil platformlarda modern ve kullanıcı dostu arayüz geliştirmek
+- Ölçeklenebilir gerçek dünya çözümü geliştirmek
+
+---
+
+## Takım Üyeleri ve Görevleri
+
+### Liderlik & Dokümantasyon
+- **İmer Imeri** → Proje koordinasyonu, dokümantasyon, gereksinim analizi  
+- **Kubilay İnanç** → Sistem tasarımı, teknik dokümantasyon, UML ve mimari çalışmaları  
+
+### Front-End Takımı
+- **Melike Rana Yozgatlı** → React Native mobil geliştirme, QR & harita ekranları, UI/UX  
+- **Tuğba Nur Ayık** → Kullanıcı deneyimi tasarımı, sayfa akışları, mobil ekran düzenleri  
+
+### Back-End Takımı
+- **Raul Namazzada** → Spring Boost API geliştirme  
+- **Ali Yılmaz** → PostgreSQL veritabanı yönetimi  
+- **Kübra Kaya** → Veri akışı ve sistem entegrasyonu  
+
+### Yapay Zekâ Takımı
+- **Muhammet Fatih Göral** → AI öneri sistemi, prompt engineering  
+- **Suhail Khaleqi** → Menü analiz sistemi, filtreleme algoritmaları  
+
+---
+
+## Takım Yetkinlikleri
+
+- React Native mobil uygulama geliştirme  
+- Spring Boost backend geliştirme  
+- PostgreSQL veritabanı yönetimi  
+- REST API geliştirme  
+- UI/UX tasarımı  
+- Yapay zekâ ve prompt engineering  
+- Web scraping ve veri işleme  
+- Agile proje yönetimi  
+- Git & GitHub takım çalışması  
+
+---
+
+## Kullanılan Teknolojiler
+
+### Mobil Uygulama
+- React Native
+- Expo
+
+### Backend
+- Spring Boost
+
+### Veritabanı
+- PostgreSQL
+
+### Yapay Zekâ ve Veri İşleme
+- Gemini API
+- NLP tabanlı analiz
+
+### Konum ve Harita
+- OpenStreetMap
+- React Native Maps
+
+### Diğer Teknolojiler
+- JWT Authentication
+- QR Code Scanner
+- OCR (Opsiyonel Menü Analizi)
+
+---
+
+## Temel Sistem Özellikleri
+
+### QR Kod ile Menü Erişimi
+Kullanıcı restorandaki QR kodu okutarak ilgili restoranın dijital menüsüne hızlı şekilde erişebilir.
+
+### AI Destekli Yemek Önerisi
+Kullanıcı:
+
+> “250 TL altında glütensiz yemek öner”
+
+gibi isteklerde bulunabilir.
+
+Sistem kullanıcı tercihlerini analiz ederek uygun yemekleri önerir.
+
+### Konum Bazlı Restoran Karşılaştırması
+Kullanıcı çevresindeki restoranları harita üzerinde görüntüleyebilir ve alternatifleri fiyat, mesafe ve içerik açısından karşılaştırabilir.
+
+### Alerjen ve Beslenme Filtreleme
+Sistem vegan, vejetaryen, helal, glütensiz gibi tercihler ile alerjen bilgilerini dikkate alır.
+
+---
+
+## Sistem Mimarisi
+
+```text
+Mobil Uygulama (React Native)
+        ↓
+Backend API (Spring Boost)
+        ↓
+PostgreSQL Database
+        ↓
+Gemini API / AI İşleme
+        ↓
+OpenStreetMap & Konum Servisleri
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## Yazılım Geliştirme Süreci
 
-To learn more about developing your project with Expo, look at the following resources:
+Projede **Agile (Çevik Yazılım Geliştirme)** yöntemi kullanılmaktadır.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Süreç
+1. Gereksinim analizi  
+2. Tasarım süreci  
+3. Front-end & Back-end geliştirme  
+4. Yapay zekâ entegrasyonu  
+5. Test ve hata yönetimi  
+6. Demo ve sunum  
 
-## Join the community
+### Çalışma Sistemi
+- Haftalık sprint planlamaları  
+- Görev dağılımları  
+- GitHub üzerinden versiyon kontrolü  
+- Düzenli test ve hata düzeltme süreçleri  
 
-Join our community of developers creating universal apps.
+---
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Katkı ve Destek Çağrısı
+
+Pick A Bite açık kaynaklı ve gelişime açık bir projedir.
+
+Katkıda bulunabilecek kişiler:
+- Yazılım geliştiriciler  
+- UI/UX tasarımcıları  
+- Yapay zekâ geliştiricileri  
+- Veri analistleri  
+- Yatırımcılar ve destekçiler  
+
+### Katkı sağladığınızda:
+- AI destekli gastronomi çözümlerinin gelişmesine katkı sağlarsınız  
+- Kullanıcı deneyiminin iyileşmesine destek olursunuz  
+- Dijital restoran teknolojilerinin gelişimine katkı sunarsınız  
+
+---
+
+## Proje Bağlantıları
+
+- Dokümantasyon ve UML diyagramları `docs/` klasörü içerisinde paylaşılmaktadır.
