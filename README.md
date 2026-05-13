@@ -21,14 +21,12 @@ Uygulama; QR kod ile restoran menüsüne erişim, yapay zekâ destekli yemek ön
 
 ## Projenin Amacı
 
-Günümüzde restoran menüleri kullanıcılar için karmaşık ve zaman kaybettirici olabilmektedir. Ayrıca kullanıcılar:
+Günümüzde restoran menüleri kullanıcılar için karmaşık ve zaman kaybettirici olabilmektedir. Bu durumun yanı sıra kullanıcılar, aşağıdaki konularda da çeşitli zorluklarla karşılaşmaktadır:
 
-- bütçelerine uygun yemek bulmakta,
-- alerjen bilgilerine ulaşmakta,
-- sağlıklı seçenekleri filtrelemekte,
-- alternatif restoranları karşılaştırmakta
-
-zorluk yaşayabilmektedir.
+- Bütçe planlamasına uygun seçenekleri belirlemekte
+- Yemeklerin içerdiği potansiyel alerjen bilgilerine erişmekte
+- Sağlıklı seçenekleri filtrelemekte
+- Alternatif restoranları karşılaştırmakta
 
 Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırmayı hedeflemektedir.
 
@@ -57,8 +55,8 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 - **Tuğba Nur Ayık** → Kullanıcı deneyimi tasarımı, sayfa akışları, mobil ekran düzenleri  
 
 ### Back-End Takımı
-- **Raul Namazzada** → Spring Boot API geliştirme  
-- **Ali Yılmaz** → PostgreSQL veritabanı yönetimi  
+- **Ali Yılmaz** → Spring Boot ve FastAPI ile Backend servisleri ve API geliştirme  
+- **Raul Namazzada** → PostgreSQL veritabanı yönetimi  
 - **Kübra Kaya** → Veri akışı ve sistem entegrasyonu  
 
 ### Yapay Zekâ Takımı
@@ -88,7 +86,7 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 - Expo
 
 ### Backend
-- Spring Boot
+- Spring Boot, FastAPI
 
 ### Veritabanı
 - PostgreSQL
