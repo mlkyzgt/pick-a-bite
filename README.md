@@ -2,7 +2,7 @@
 
 Pick A Bite, kullanıcıların restoran menülerini daha hızlı, bilinçli ve kişisel ihtiyaçlarına uygun şekilde değerlendirebilmelerini amaçlayan yapay zekâ destekli, konum tabanlı bir yemek öneri ve menü karşılaştırma uygulamasıdır.
 
-Uygulama; QR kod ile restoran menüsüne erişim, yapay zekâ destekli yemek önerileri, alerjen filtreleme ve çevredeki restoranları karşılaştırma gibi özellikleri bir araya getirir.
+Uygulama; QR kod ile restoran menüsüne erişim, yapay zeka destekli yemek önerileri, alerjen filtreleme ve çevredeki restoranları karşılaştırma gibi özellikleri bir araya getirir.
 
 ---
 
@@ -28,14 +28,14 @@ Günümüzde restoran menüleri kullanıcılar için karmaşık ve zaman kaybett
 - Sağlıklı seçenekleri filtrelemekte
 - Alternatif restoranları karşılaştırmakta
 
-Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırmayı hedeflemektedir.
+Pick A Bite, bu süreci yapay zeka ve konum tabanlı sistemlerle kolaylaştırmayı hedeflemektedir.
 
 ---
 
 ## Proje Hedefleri
 
 - QR tabanlı hızlı menü erişimi sağlamak
-- Yapay zekâ destekli yemek öneri sistemi geliştirmek
+- Yapay zeka destekli yemek öneri sistemi geliştirmek
 - Konum tabanlı restoran keşfi sunmak
 - Restoranlar arası fiyat ve menü karşılaştırması yapmak
 - Kullanıcı tercihlerini analiz ederek kişiselleştirilmiş deneyim oluşturmak
@@ -59,7 +59,7 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 - **Raul Namazzada** → PostgreSQL veritabanı yönetimi  
 - **Kübra Kaya** → Veri akışı ve sistem entegrasyonu  
 
-### Yapay Zekâ Takımı
+### Yapay Zeka Takımı
 - **Muhammet Fatih Göral** → AI öneri sistemi, prompt engineering  
 - **Suhail Khaleqi** → Menü analiz sistemi, filtreleme algoritmaları  
 
@@ -72,7 +72,7 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 - PostgreSQL veritabanı yönetimi  
 - REST API geliştirme  
 - UI/UX tasarımı  
-- Yapay zekâ ve prompt engineering  
+- Yapay zeka ve prompt engineering  
 - Web scraping ve veri işleme  
 - Agile proje yönetimi  
 - Git & GitHub takım çalışması  
@@ -91,7 +91,7 @@ Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırm
 ### Veritabanı
 - PostgreSQL
 
-### Yapay Zekâ ve Veri İşleme
+### Yapay Zeka ve Veri İşleme
 - Gemini API
 - NLP tabanlı analiz
 
@@ -152,7 +152,7 @@ Projede **Agile (Çevik Yazılım Geliştirme)** yöntemi kullanılmaktadır.
 1. Gereksinim analizi  
 2. Tasarım süreci  
 3. Front-end & Back-end geliştirme  
-4. Yapay zekâ entegrasyonu  
+4. Yapay zeka entegrasyonu  
 5. Test ve hata yönetimi  
 6. Demo ve sunum  
 
@@ -171,7 +171,7 @@ Pick A Bite açık kaynaklı ve gelişime açık bir projedir.
 Katkıda bulunabilecek kişiler:
 - Yazılım geliştiriciler  
 - UI/UX tasarımcıları  
-- Yapay zekâ geliştiricileri  
+- Yapay zeka geliştiricileri  
 - Veri analistleri  
 - Yatırımcılar ve destekçiler  
 
