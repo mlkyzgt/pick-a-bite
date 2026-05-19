@@ -146,8 +146,6 @@ OpenStreetMap & Konum Servisleri
 
 ## Yazılım Geliştirme Süreci
 
-Projede **Agile (Çevik Yazılım Geliştirme)** yöntemi kullanılmaktadır.
-
 ### Süreç
 1. Gereksinim analizi  
 2. Tasarım süreci  
