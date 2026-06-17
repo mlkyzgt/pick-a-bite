@@ -1,187 +1,174 @@
 # Pick A Bite
 
-Pick A Bite, kullanıcıların restoran menülerini daha hızlı, bilinçli ve kişisel ihtiyaçlarına uygun şekilde değerlendirebilmelerini amaçlayan yapay zekâ destekli, konum tabanlı bir yemek öneri ve menü karşılaştırma uygulamasıdır.
+Pick A Bite, kullanıcıların restoran menülerini daha hızlı, bilinçli ve kişisel ihtiyaçlarına uygun şekilde değerlendirebilmelerini amaçlayan yapay zekâ destekli, konum tabanlı bir yemek öneri ve menü uygulamasıdır. QR kod ile dijital menüye erişim, doğal dille çalışan yapay zekâ asistanı, alerjen ve beslenme tercihi filtreleme, bütçe odaklı öneriler ve çevredeki restoranları karşılaştırma özelliklerini bir araya getirir.
 
-Uygulama; QR kod ile restoran menüsüne erişim, yapay zeka destekli yemek önerileri, alerjen filtreleme ve çevredeki restoranları karşılaştırma gibi özellikleri bir araya getirir.
+Bursa Teknik Üniversitesi BLM0324 Yazılım Mühendisliği proje ödevi kapsamında geliştirilmiştir.
+
+```
+"250 TL altında glütensiz bir öğün öner"
+        ↓
+  Yapay zekâ menüyü tarar → en uygun seçenekleri sunar
+```
 
 ---
 
-## Proje Özellikleri
+## Demo Video
 
-- Konum tabanlı restoran keşfi
-- QR kod ile dijital menü erişimi
-- AI destekli chatbot sistemi
-- Beslenme tercihi ve alerjen filtreleme
-- Bütçe odaklı yemek önerileri
-- Yakındaki restoranları karşılaştırma
-- Modern mobil arayüz
-- Harita tabanlı restoran görüntüleme
+Ürünü tanıtan ve kullanımını gösteren video:
+
+**https://youtu.be/Z5ILXRLEks4**
+
+---
+
+## İçindekiler
+
+- [Projenin Amacı](#projenin-amacı)
+- [Proje Hedefleri](#proje-hedefleri)
+- [Özellikler](#özellikler)
+- [Teknoloji Yığını](#teknoloji-yığını)
+- [Sistem Mimarisi](#sistem-mimarisi)
+- [Takım Üyeleri ve Görevleri](#takım-üyeleri-ve-görevleri)
+- [Takım Yetkinlikleri](#takım-yetkinlikleri)
+- [Yazılım Geliştirme Süreci](#yazılım-geliştirme-süreci)
+- [Belgeler](#belgeler)
 
 ---
 
 ## Projenin Amacı
 
-Günümüzde restoran menüleri kullanıcılar için karmaşık ve zaman kaybettirici olabilmektedir. Bu durumun yanı sıra kullanıcılar, aşağıdaki konularda da çeşitli zorluklarla karşılaşmaktadır:
+Günümüzde restoran menüleri kullanıcılar için karmaşık ve zaman kaybettirici olabilmektedir. Kullanıcılar ayrıca şu konularda zorluk yaşamaktadır:
 
-- Bütçe planlamasına uygun seçenekleri belirlemekte
-- Yemeklerin içerdiği potansiyel alerjen bilgilerine erişmekte
-- Sağlıklı seçenekleri filtrelemekte
-- Alternatif restoranları karşılaştırmakta
+- Bütçeye uygun seçenekleri belirlemek
+- Yemeklerin içerdiği potansiyel alerjen bilgilerine erişmek
+- Sağlıklı ve tercihe uygun seçenekleri filtrelemek
+- Alternatif restoranları karşılaştırmak
 
-Pick A Bite, bu süreci yapay zeka ve konum tabanlı sistemlerle kolaylaştırmayı hedeflemektedir.
+Pick A Bite, bu süreci yapay zekâ ve konum tabanlı sistemlerle kolaylaştırmayı hedefler.
 
 ---
 
 ## Proje Hedefleri
 
 - QR tabanlı hızlı menü erişimi sağlamak
-- Yapay zeka destekli yemek öneri sistemi geliştirmek
+- Yapay zekâ destekli yemek öneri sistemi geliştirmek
 - Konum tabanlı restoran keşfi sunmak
 - Restoranlar arası fiyat ve menü karşılaştırması yapmak
 - Kullanıcı tercihlerini analiz ederek kişiselleştirilmiş deneyim oluşturmak
-- Mobil platformlarda modern ve kullanıcı dostu arayüz geliştirmek
-- Ölçeklenebilir gerçek dünya çözümü geliştirmek
+- Mobil platformlarda modern ve kullanıcı dostu bir arayüz geliştirmek
+- Ölçeklenebilir, gerçek dünya verisiyle çalışan bir çözüm geliştirmek
 
 ---
 
-## Takım Üyeleri ve Görevleri
+## Özellikler
 
-### Liderlik & Dokümantasyon
-- **İmer Imeri** → Proje koordinasyonu, dokümantasyon, gereksinim analizi  
-- **Kubilay İnanç** → Sistem tasarımı, teknik dokümantasyon, UML ve mimari çalışmaları  
-
-### Front-End Takımı
-- **Melike Rana Yozgatlı** → React Native mobil geliştirme, QR & harita ekranları, UI/UX  
-- **Tuğba Nur Ayık** → Kullanıcı deneyimi tasarımı, sayfa akışları, mobil ekran düzenleri  
-
-### Back-End Takımı
-- **Ali Yılmaz** → Spring Boot ve FastAPI ile Backend servisleri ve API geliştirme  
-- **Raul Namazzada** → PostgreSQL veritabanı yönetimi  
-- **Kübra Kaya** → Veri akışı ve sistem entegrasyonu  
-
-### Yapay Zeka Takımı
-- **Muhammet Fatih Göral** → AI öneri sistemi, prompt engineering  
-- **Suhail Khaleqi** → Menü analiz sistemi, filtreleme algoritmaları  
+| # | Özellik | Açıklama |
+|---|---------|----------|
+| 1 | **QR ile Menü Erişimi** | Masadaki QR kodu kameraya tut, menü anında açılır |
+| 2 | **AI Chatbot Öneri** | Doğal dilde sorgu (Groq Llama 3.3 70B) ile menüden filtreli öneri |
+| 3 | **Konum Bazlı Keşif** | Harita üzerinde yakın restoranlar; menüsüz gri, nötr mavi, tercihe uygun yeşil, uygun değil kırmızı |
+| 4 | **Menü Görüntüleme** | Kategorize menü: ad, açıklama, fiyat, tahminî kalori, alerjen rozetleri |
+| 5 | **Ürün Detayı** | Ürüne dokun → fiyat, tahminî kalori, alerjen ve tercihe göre uygunluk rozeti |
+| 6 | **Kişisel Tercihler** | Vegan / glütensiz / laktoz / alerjen / bütçe — kalıcı olarak saklanır |
+| 7 | **Kayıt / Giriş (JWT)** | Misafir + opsiyonel hesap: kayıt, giriş, çıkış; tokenlar güvenli saklanır |
+| 8 | **Otomatik Menü Senkronu** | Dijital menü kaynağı belirli aralıklarla taranır; fiyat/ürün değişiklikleri uygulamaya kendiliğinden yansır |
+| 9 | **QR ile Keşif** | Sistemde olmayan restoranın web menü QR'ı okutulunca menü çıkarılıp kalıcı kaydedilir; restoran herkes için menülü olur |
+| 10 | **Otomatik AI Menü Analizi** | Eksik bilgili (kalori/açıklama/alerjen) ürünler arka planda yapay zekâ ile doldurulur; yeni keşfedilen restoran kendiliğinden tamamlanır |
 
 ---
 
-## Takım Yetkinlikleri
+## Teknoloji Yığını
 
-- React Native mobil uygulama geliştirme  
-- Spring Boot backend geliştirme  
-- PostgreSQL veritabanı yönetimi  
-- REST API geliştirme  
-- UI/UX tasarımı  
-- Yapay zeka ve prompt engineering  
-- Web scraping ve veri işleme  
-- Agile proje yönetimi  
-- Git & GitHub takım çalışması  
-
----
-
-## Kullanılan Teknolojiler
-
-### Mobil Uygulama
-- React Native
-- Expo
-
-### Backend
-- Spring Boot, FastAPI
-
-### Veritabanı
-- PostgreSQL
-
-### Yapay Zeka ve Veri İşleme
-- Gemini API
-- NLP tabanlı analiz
-
-### Konum ve Harita
-- OpenStreetMap
-- React Native Maps
-
-### Diğer Teknolojiler
-- JWT Authentication
-- QR Code Scanner
-- OCR (Opsiyonel Menü Analizi)
-
----
-
-## Temel Sistem Özellikleri
-
-### QR Kod ile Menü Erişimi
-Kullanıcı restorandaki QR kodu okutarak ilgili restoranın dijital menüsüne hızlı şekilde erişebilir.
-
-### AI Destekli Yemek Önerisi
-Kullanıcı:
-
-> “250 TL altında glütensiz yemek öner”
-
-gibi isteklerde bulunabilir.
-
-Sistem kullanıcı tercihlerini analiz ederek uygun yemekleri önerir.
-
-### Konum Bazlı Restoran Karşılaştırması
-Kullanıcı çevresindeki restoranları harita üzerinde görüntüleyebilir ve alternatifleri fiyat, mesafe ve içerik açısından karşılaştırabilir.
-
-### Alerjen ve Beslenme Filtreleme
-Sistem vegan, vejetaryen, helal, glütensiz gibi tercihler ile alerjen bilgilerini dikkate alır.
+| Katman | Teknoloji |
+|--------|-----------|
+| **Mobil** | React Native, Expo, TypeScript, Expo Router |
+| **Harita** | react-native-maps, OpenStreetMap |
+| **Backend** | Spring Boot (Java 17), Spring Data JPA, Hibernate |
+| **Veritabanı** | H2 (PostgreSQL uyumlu mod) — üretim için PostgreSQL'e geçiş hazır |
+| **Kimlik Doğrulama** | Spring Security + JWT + BCrypt |
+| **Yapay Zekâ** | Groq API (llama-3.3-70b-versatile), Gemini (yedek) |
+| **Veri Toplama** | Python (pandas, requests), Google Places API, web menü çıkarımı |
 
 ---
 
 ## Sistem Mimarisi
 
 ```text
-Mobil Uygulama (React Native)
-        ↓
-Backend API (Spring Boot)
-        ↓
-PostgreSQL Database
-        ↓
-Gemini API / AI İşleme
-        ↓
-OpenStreetMap & Konum Servisleri
+Mobil Uygulama (React Native / Expo)
+        |
+Backend REST API (Spring Boot)
+        |
+H2 / PostgreSQL Veritabanı
+        |
+Yapay Zekâ (Groq) + Otomatik Menü Senkronu
+        |
+OpenStreetMap ve Konum Servisleri
 ```
+
+Katmanlı mimari (Controller - Service - Repository) ve DTO deseni uygulanmıştır. Kimlik doğrulama JWT ile sağlanır; çoğu uç herkese açıkken kullanıcıya özel uçlar token gerektirir.
+
+---
+
+## Takım Üyeleri ve Görevleri
+
+### Liderlik & Dokümantasyon
+- **İmer Imeri** → Proje koordinasyonu, dokümantasyon, gereksinim analizi
+- **Kubilay İnanç** → Sistem tasarımı ve mimari, tam yığın entegrasyon (mobil–backend–yapay zekâ), hata onarımı ve test, teknik dokümantasyon
+
+### Front-End Takımı
+- **Melike Rana Yozgatlı** → React Native mobil geliştirme, QR & harita ekranları, UI/UX
+- **Tuğba Nur Ayık** → Kullanıcı deneyimi tasarımı, sayfa akışları, mobil ekran düzenleri
+
+### Back-End Takımı
+- **Ali Yılmaz** → Spring Boot ve FastAPI ile Backend servisleri ve API geliştirme
+- **Raul Namazzada** → PostgreSQL veritabanı yönetimi
+- **Kübra Kaya** → Veri akışı ve sistem entegrasyonu
+
+### Yapay Zeka Takımı
+- **Muhammet Fatih Göral** → AI öneri sistemi, prompt engineering
+- **Suhail Khaleqi** → Menü analiz sistemi, filtreleme algoritmaları
+
+---
+
+## Takım Yetkinlikleri
+
+- React Native mobil uygulama geliştirme
+- Spring Boot backend geliştirme
+- PostgreSQL veritabanı yönetimi
+- REST API geliştirme
+- UI/UX tasarımı
+- Yapay zeka ve prompt engineering
+- Web scraping ve veri işleme
+- Agile proje yönetimi
+- Git & GitHub takım çalışması
 
 ---
 
 ## Yazılım Geliştirme Süreci
 
-Projede **Agile (Çevik Yazılım Geliştirme)** yöntemi kullanılmaktadır.
+Projede **Agile (Çevik Yazılım Geliştirme)** yöntemi kullanılmıştır.
 
 ### Süreç
-1. Gereksinim analizi  
-2. Tasarım süreci  
-3. Front-end & Back-end geliştirme  
-4. Yapay zeka entegrasyonu  
-5. Test ve hata yönetimi  
-6. Demo ve sunum  
+1. Gereksinim analizi
+2. Tasarım süreci
+3. Front-end & Back-end geliştirme
+4. Yapay zeka entegrasyonu
+5. Test ve hata yönetimi
+6. Demo ve sunum
 
 ### Çalışma Sistemi
-- Haftalık sprint planlamaları  
-- Görev dağılımları  
-- GitHub üzerinden versiyon kontrolü  
-- Düzenli test ve hata düzeltme süreçleri  
+- Haftalık sprint planlamaları
+- Görev dağılımları
+- GitHub üzerinden versiyon kontrolü
+- Düzenli test ve hata düzeltme süreçleri
 
 ---
 
-## Katkı ve Destek Çağrısı
+## Belgeler
 
-Pick A Bite açık kaynaklı ve gelişime açık bir projedir.
-
-Katkıda bulunabilecek kişiler:
-- Yazılım geliştiriciler  
-- UI/UX tasarımcıları  
-- Yapay zeka geliştiricileri  
-- Veri analistleri  
-- Yatırımcılar ve destekçiler  
-
-### Katkı sağladığınızda:
-- AI destekli gastronomi çözümlerinin gelişmesine katkı sağlarsınız  
-- Kullanıcı deneyiminin iyileşmesine destek olursunuz  
-- Dijital restoran teknolojilerinin gelişimine katkı sunarsınız  
+Gereksinim dokümanı, uygulama mimarisi, sınıf ve kullanım durumu diyagramları (UML), kullanım kılavuzu ve iş planı `docs/` klasöründe paylaşılmaktadır.
 
 ---
 
-## Proje Bağlantıları
+## Lisans
 
-- Dokümantasyon ve UML diyagramları `docs/` klasörü içerisinde paylaşılmaktadır.
+Bu proje Bursa Teknik Üniversitesi BLM0324 dersi kapsamında eğitim amaçlı geliştirilmiştir.
